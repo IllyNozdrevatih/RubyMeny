@@ -1,0 +1,17 @@
+<%= form_for @daily_menu , url: daily_menus_path do |f|%>
+  <input type="date" name="date">
+  <%= f.submit %>
+<% end %>
+
+<%#= form_for @table , url: daily_menus_add_dish_path do |f|%>
+<!--  <div class="form-group">-->
+<!--    <span class="h4">Add dish</span>-->
+<!--    <div>-->
+      <%#=collection_select(:dish,:dish_ids,Dish.all,:id,:name ) %>
+<!--    </div>-->
+<!--    <div>-->
+      <%#=collection_select(:dish_unit,:dish__unit_ids,DishUnit.all,:id,:name ) %>
+<!--    </div>-->
+<!--  </div>-->
+<!--  <button class="btn btn-primary">Add</button>-->
+<%# end %>
