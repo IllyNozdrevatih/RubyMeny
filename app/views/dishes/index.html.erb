@@ -1,1 +1,10 @@
-<h1>Index</h1>
+<% Category.all.each do |cat| %>
+  <h3><%= cat.name %></h3>
+  <% @dishes.each do |dish| %>
+    <% if cat.name === dish.category.name %>
+      <ul>
+        <li><%= dish.name %> - <%= dish.weight %><%= dish.measure %>/<%= dish.price %>грн  <%=link_to 'x' , dish_path(dish.id), method: :delete %></li>
+      </ul>
+    <% end %>
+  <% end %>
+<% end %>

@@ -1,1 +1,20 @@
-<h1>Index</h1>
+<table class="table">
+  <tr>
+    <td>id</td>
+    <td>дата</td>
+    <td>Количество блюд</td>
+    <td>показать</td>
+    <td>изменить</td>
+    <td>удалить</td>
+  </tr>
+<% @daily_menus.each do |menu| %>
+  <tr>
+    <td><%= menu.id %></td>
+    <td><%= menu.date %></td>
+    <td><%= menu.dish.length %></td>
+    <td><%= link_to 'show' , daily_menu_path(menu) %></td>
+    <td><%= link_to 'edit' , edit_daily_menu_path(menu) %></td>
+    <td><%= link_to 'del' , daily_menu_path(menu) , method: :delete %></td>
+  </tr>
+<% end %>
+</table>

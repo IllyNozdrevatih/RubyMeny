@@ -1,6 +1,8 @@
 class DishesController < ApplicationController
+  before_action :authenticate_user!
   before_action :find_dish , only: [:edit,:add_dish, :update ,:show ,:destroy]
   def index
+    @dishes = Dish.all
   end
   def new
     @dish = Dish.new
@@ -9,7 +11,7 @@ class DishesController < ApplicationController
     @dish = Dish.new(dish_params)
     Category.find(add_category).dish << @dish
     if @dish.save
-      render :index
+      redirect_to dishes_path
     else
       render :new
     end
@@ -29,7 +31,7 @@ class DishesController < ApplicationController
   end
   def destroy
     if @dish.destroy
-      redirect_to dish_path
+      redirect_to dishes_path
     end
   end
   private

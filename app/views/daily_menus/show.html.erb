@@ -1,0 +1,11 @@
+<% Category.all.each do |cat| %>
+  <h3><%= cat.name %></h3>
+  <% @daily_menu.dish.each do |dish| %>
+    <% if cat.name === dish.category.name %>
+      <ul>
+        <li><%= dish.name %> - <%= dish.weight %><%= dish.measure %>/<%= dish.price %>грн</li>
+      </ul>
+    <% end %>
+  <% end %>
+<% end %>
+<%= link_to 'Назад' , daily_menus_path %>
