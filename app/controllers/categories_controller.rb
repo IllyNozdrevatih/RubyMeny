@@ -19,8 +19,10 @@ class CategoriesController < ApplicationController
 
   end
   def update
-    if @category.update
-      render :index
+    if @category.update(category_param)
+      redirect_to categories_path
+    else
+      render :edit
     end
   end
   def show

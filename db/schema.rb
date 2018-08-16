@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2018_08_16_114549) do
     t.string "weight", null: false
     t.string "measure"
     t.float "price", null: false
+    t.boolean "units", default: false, null: false
     t.bigint "category_id"
     t.index ["category_id"], name: "index_dishes_on_category_id"
   end

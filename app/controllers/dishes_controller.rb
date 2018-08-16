@@ -10,19 +10,19 @@ class DishesController < ApplicationController
   def create
     @dish = Dish.new(dish_params)
     if @dish.save
-      redirect_to dishes_path
+      redirect_to dishes_path , success: 'Блюдо создано'
     else
-      render :new
+      render :new, denger: 'Ошибка'
     end
   end
   def edit
 
   end
   def update
-    if @dish.update
-      render :index
+    if @dish.update(dish_params)
+      redirect_to dishes_path , success: 'Блюдо обновлено'
     else
-      render :edit
+      render :edit , denger: 'Блюдо не обновлено'
     end
   end
   def show
@@ -30,7 +30,7 @@ class DishesController < ApplicationController
   end
   def destroy
     if @dish.destroy
-      redirect_to dishes_path
+      redirect_to dishes_path, success: 'Блюдо удалено'
     end
   end
   private
@@ -38,7 +38,7 @@ class DishesController < ApplicationController
     @dish = Dish.find(params[:id])
   end
   def dish_params
-    params[:dish].permit(:name,:weight,:measure,:price,:category_id)
+    params[:dish].permit(:name,:weight,:measure,:price,:units,:category_id)
   end
 end
 

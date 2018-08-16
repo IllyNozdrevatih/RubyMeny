@@ -20,5 +20,8 @@
   <%= collection_radio_buttons(:dish , :category_id , Category.all ,:id, :name) do |cat|%>
     <%= cat.label {cat.radio_button + cat.text} %>
   <% end %>
+  <div>Порция</div>
+  <input type="radio" name="dish[units]"value="1">Да
+  <input type="radio" name="dish[units]" value="0">Нет
   <%= f.submit %>
 <% end %>

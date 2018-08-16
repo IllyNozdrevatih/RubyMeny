@@ -1,9 +1,15 @@
-<%= form_for @dish , url:categories_path do |f|  %>
+<%= form_for @dish , url:dish_path do |f|  %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.label :weight %>
   <%= f.text_field :weight %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.label :measure %>
+  <%= f.text_field :measure %>
+  <%= collection_radio_buttons(:dish , :category_id , Category.all ,:id, :name) do |cat|%>
+    <div><%= cat.label {cat.radio_button + cat.text} %></div>
+  <% end %>
+  <div>Порция</div>
+    <input type="radio" name="dish[units]" <% if @dish.units == true %> checked <% end %> value="1">Да
+    <input type="radio" name="dish[units]" value="0">Нет
   <%= f.submit %>
 <% end %>

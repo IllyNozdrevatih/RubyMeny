@@ -43,6 +43,15 @@
         </div>
     </header>
     <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <% flash.each do |name,massage| %>
+            <div class="alert alert-<%= name %>">
+              <%= massage %>
+            </div>
+          <% end %>
+        </div>
+      </div>
       <%= yield %>
     </div>
   </body>
