@@ -5,7 +5,6 @@ class CreateDishes < ActiveRecord::Migration[5.2]
       t.string :weight, null: false
       t.string :measure , null: true 
       t.float :price,null: false
-      t.integer :category_id,null:true,default:0
     end
   end
 end

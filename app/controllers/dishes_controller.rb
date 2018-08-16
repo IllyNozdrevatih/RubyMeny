@@ -9,7 +9,6 @@ class DishesController < ApplicationController
   end
   def create
     @dish = Dish.new(dish_params)
-    Category.find(add_category).dish << @dish
     if @dish.save
       redirect_to dishes_path
     else
@@ -39,10 +38,7 @@ class DishesController < ApplicationController
     @dish = Dish.find(params[:id])
   end
   def dish_params
-    params[:dish].permit(:name,:weight,:measure,:price)
-  end
-  def add_category
-    request['category']['category_id']
+    params[:dish].permit(:name,:weight,:measure,:price,:category_id)
   end
 end
 

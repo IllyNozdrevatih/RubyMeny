@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_13_135155) do
+ActiveRecord::Schema.define(version: 2018_08_16_114549) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -21,10 +21,10 @@ ActiveRecord::Schema.define(version: 2018_08_13_135155) do
   end
 
   create_table "daily_menus_dishes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "Dish_id"
-    t.bigint "DailyMenu_id"
-    t.index ["DailyMenu_id"], name: "index_daily_menus_dishes_on_DailyMenu_id"
-    t.index ["Dish_id"], name: "index_daily_menus_dishes_on_Dish_id"
+    t.bigint "dish_id"
+    t.bigint "daily_menu_id"
+    t.index ["daily_menu_id"], name: "index_daily_menus_dishes_on_daily_menu_id"
+    t.index ["dish_id"], name: "index_daily_menus_dishes_on_dish_id"
   end
 
   create_table "dishes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -32,7 +32,8 @@ ActiveRecord::Schema.define(version: 2018_08_13_135155) do
     t.string "weight", null: false
     t.string "measure"
     t.float "price", null: false
-    t.integer "category_id", default: 0
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_dishes_on_category_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -52,4 +53,5 @@ ActiveRecord::Schema.define(version: 2018_08_13_135155) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "dishes", "categories"
 end
