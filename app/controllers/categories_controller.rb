@@ -29,8 +29,11 @@ class CategoriesController < ApplicationController
 
   end
   def destroy
-    if @category.destroy
-      redirect_to categories_path
+    if @category.dish.empty?
+      @category.destroy
+      redirect_to categories_path ,success: 'Категория удалена'
+    else
+      redirect_to categories_path ,danger: 'Переопределите блюда , всего ' +  @category.dish.length.to_s
     end
   end
   private
