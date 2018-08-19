@@ -1,9 +1,14 @@
 <% Category.all.each do |cat| %>
   <h3><%= cat.name %></h3>
-  <% @daily_menu.dish.each do |dish| %>
+  <% @daily_menu.dishes.each do |dish| %>
     <% if cat.name === dish.category.name %>
-      <ul>
-        <li><%= dish.name %> - <%= dish.weight %><%= dish.measure %>/<%= dish.price %>грн</li>
+      <ul class="category-list">
+        <li>
+          <%= dish.name %> - <%= dish.weight %>
+          <% if dish.units == true %>
+            (порция)
+          <% end %>
+          <%= dish.measure %>/<%= dish.last_price(dish) %>грн</li>
       </ul>
     <% end %>
   <% end %>

@@ -9,19 +9,30 @@
       </ul>
     </div>
   <% end %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :measure %>
-  <%= f.text_field :measure %>
-  <%= f.label :price %>
-  <%= f.text_field :price %>
-  <%= f.label :weight %>
-  <%= f.text_field :weight %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name , class:"form-control"%>
+  </div>
+  <div class="form-group">
+    <%= f.label :weight %>
+    <%= f.text_field :weight, class:"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :measure %>
+    <%= f.text_field :measure, class:"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :price %>
+    <%= f.text_field :price, class:"form-control" %>
+  </div>
+  <div class="h5">Категория:</div>
   <%= collection_radio_buttons(:dish , :category_id , Category.all ,:id, :name) do |cat|%>
-    <%= cat.label {cat.radio_button + cat.text} %>
+    <div><%= cat.label {cat.radio_button + cat.text} %></div>
   <% end %>
-  <div>Порция</div>
-  <input type="radio" name="dish[units]"value="1">Да
-  <input type="radio" name="dish[units]" value="0">Нет
+  <div class="form-group">
+    <div>Порция</div>
+    <input type="radio" name="dish[units]"value="1">Да
+    <input type="radio" name="dish[units]" value="0">Нет
+  </div>
   <%= f.submit %>
 <% end %>

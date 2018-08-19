@@ -1,4 +1,6 @@
 class DailyMenu < ApplicationRecord
-  has_and_belongs_to_many :dish
-  validates :date,presence: true
+  has_many :daily_menus_dishes
+  has_many :dishes, through: :daily_menus_dishes
+  validates :date, presence: true
+
 end

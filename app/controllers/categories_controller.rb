@@ -10,7 +10,7 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(category_param)
     if @category.save
-      redirect_to categories_path
+      redirect_to categories_path , success: 'Категория создана'
     else
       render :new
     end
@@ -20,7 +20,7 @@ class CategoriesController < ApplicationController
   end
   def update
     if @category.update(category_param)
-      redirect_to categories_path
+      redirect_to categories_path , success: 'Категория изменина'
     else
       render :edit
     end
@@ -33,7 +33,7 @@ class CategoriesController < ApplicationController
       @category.destroy
       redirect_to categories_path ,success: 'Категория удалена'
     else
-      redirect_to categories_path ,danger: 'Переопределите блюда , всего ' +  @category.dish.length.to_s
+      redirect_to categories_path ,danger: 'Переопределите категории блюд , всего ' +  @category.dish.length.to_s
     end
   end
   private

@@ -18,11 +18,14 @@ ActiveRecord::Schema.define(version: 2018_08_16_114549) do
 
   create_table "daily_menus", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.date "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "daily_menus_dishes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "dish_id"
     t.bigint "daily_menu_id"
+    t.float "price", null: false
     t.index ["daily_menu_id"], name: "index_daily_menus_dishes_on_daily_menu_id"
     t.index ["dish_id"], name: "index_daily_menus_dishes_on_dish_id"
   end

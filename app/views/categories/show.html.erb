@@ -1,6 +1,6 @@
 <h3><%=@category.name %></h3>
 <% @category.dish.each do |dish| %>
-  <ul>
+  <ul class="category-list">
     <li><%= dish.name %> - <%= dish.weight %><%= dish.measure %>/<%= dish.price %>грн</li>
   </ul>
 <% end %>

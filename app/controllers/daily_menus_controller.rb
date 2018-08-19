@@ -2,7 +2,7 @@ class DailyMenusController < ApplicationController
   before_action :authenticate_user!
   before_action :find_daily_menu , only: [:edit,:add_dish, :update ,:show ,:destroy]
   def index
-    @daily_menus = DailyMenu.all
+    @daily_menus = DailyMenu.order(created_at: :desc)
   end
   def new
     @daily_menu = DailyMenu.new
@@ -10,28 +10,27 @@ class DailyMenusController < ApplicationController
   def create
     @daily_menu = DailyMenu.new(daily_menu_params)
     @daily_menu.save()
-    redirect_to daily_menus_path
+    redirect_to daily_menus_path , success: 'Меню создано . Измените меню , что-бы добавить блюдо'
   end
   def edit
 
   end
   def update
     if @daily_menu.save
-      redirect_to daily_menus_path
+      redirect_to daily_menus_path, success: 'Меню обновлено'
     else
-      render :edit
+      render :edit, denger: 'Меню не обновлено'
     end
   end
   def show
 
   end
   def destroy
-    if @daily_menu.destroy
-      redirect_to daily_menus_path
-    end
+    @daily_menu.destroy
+    redirect_to daily_menus_path , success: 'Меню удалено'
   end
   def add_dish
-    @daily_menu.dish << Dish.find(dish_params['dish_id'])
+    @daily_menu.dishes << Dish.find(dish_params['dish_id'])
     redirect_to edit_daily_menu_path
   end
 

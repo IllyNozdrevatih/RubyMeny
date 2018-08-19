@@ -12,47 +12,125 @@
   </head>
 
   <body>
-    <header>
+    <div style="min-height: 550px">
+      <div class="top_header_area">
         <div class="container">
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <i class="fas fa-utensils fa-2x"></i>
-            <a class="navbar-brand ml-1 " href="#">Кухня</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                  <%= link_to 'Составить меню' , new_daily_menu_path , class:"nav-link"%>
-                </li>
-                <li class="nav-item">
-                  <%= link_to 'Расписание' , daily_menus_path , class:"nav-link"%>
-                </li>
-                <li class="nav-item">
-                  <%= link_to 'Все блюда' , dishes_path , class:"nav-link" %>
-                </li>
-              </ul>
-              <% if user_signed_in? %>
-                <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
-              <% else %>
-                <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
-              <% end %>
+          <div class="row">
+            <div class="col-5 col-sm-6"></div>
+            <!--  Login Register Area -->
+            <div class="col-7 col-sm-6">
+              <div class="signup-search-area d-flex align-items-center justify-content-end">
+                <div class="login_register_area d-flex">
+                  <% if user_signed_in? %>
+                  <div class="login">
+                    <%= link_to 'Выйти' , destroy_user_session_path , :method => :delete %>
+                  </div>
+                  <% else %>
+                  <div class="login">
+                    <%= link_to 'Войти' , new_user_session_path %>
+                  </div>
+                  <div class="register">
+                    <%= link_to 'Зарегистрироваться' , new_user_registration_path %>
+                  </div>
+                  <% end %>
+                </div>
+              </div>
             </div>
-          </nav>
-        </div>
-    </header>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <% flash.each do |name,massage| %>
-            <div class="alert alert-<%= name %>">
-              <%= massage %>
-            </div>
-          <% end %>
+          </div>
         </div>
       </div>
-      <%= yield %>
+      <header>
+        <div class="container">
+          <div class="row">
+            <!-- Logo Area Start -->
+            <div class="col-12">
+              <div class="logo_area text-center">
+                <%=link_to 'Кухня' , daily_menus_path , class:"yummy-logo"%>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <nav class="navbar navbar-expand-lg">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#yummyfood-nav" aria-controls="yummyfood-nav" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars" aria-hidden="true"></i> Menu</button>
+                <!-- Menu Area Start -->
+                <div class="collapse navbar-collapse justify-content-center" id="yummyfood-nav">
+                  <ul class="navbar-nav" id="yummy-nav">
+                    <li class="nav-item">
+                      <%= link_to 'Составить меню' , new_daily_menu_path , class:"nav-link"%>
+                    </li>
+                    <li class="nav-item">
+                      <%= link_to 'Расписание' , daily_menus_path , class:"nav-link"%>
+                    </li>
+                    <li class="nav-item">
+                      <%= link_to 'Все блюда' , dishes_path , class:"nav-link" %>
+                    </li>
+                    <li class="nav-item">
+                      <%= link_to 'Категории' , categories_path , class:"nav-link" %>
+                    </li>
+                    <li class="nav-item">
+                      <%= link_to 'Составить блюдо' , new_dish_path , class:"nav-link" %>
+                    </li>
+                    <li class="nav-item">
+                      <%= link_to 'Создать категорию' , new_category_path , class:"nav-link" %>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <% flash.each do |name,massage| %>
+              <div class="alert alert-<%= name %>">
+                <%= massage %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+        <%= yield %>
+      </div>
     </div>
+    <footer class="footer_area">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="footer-content">
+              <!-- Menu Area Start -->
+              <nav class="navbar navbar-expand-lg">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#yummyfood-footer-nav" aria-controls="yummyfood-footer-nav" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars" aria-hidden="true"></i> Menu</button>
+                <!-- Menu Area Start -->
+                <div class="collapse navbar-collapse justify-content-center" id="yummyfood-footer-nav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <%= link_to 'Составить меню' , new_daily_menu_path , class:"nav-link"%>
+                    </li>
+                    <li class="nav-item">
+                      <%= link_to 'Расписание' , daily_menus_path , class:"nav-link"%>
+                    </li>
+                    <li class="nav-item">
+                      <%= link_to 'Все блюда' , dishes_path , class:"nav-link" %>
+                    </li>
+                    <li class="nav-item">
+                      <%= link_to 'Категории' , categories_path , class:"nav-link" %>
+                    </li>
+                    <li class="nav-item">
+                      <%= link_to 'Составить блюдо' , new_dish_path , class:"nav-link" %>
+                    </li>
+                    <li class="nav-item">
+                      <%= link_to 'Создать категорию' , new_category_path , class:"nav-link" %>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
+
