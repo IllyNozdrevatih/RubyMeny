@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   resources :daily_menus
   resources :dishes
   resources :categories
+  resources :daily_menus do
+    resources :daily_menus_dishes , only: :destroy
+  end
 end

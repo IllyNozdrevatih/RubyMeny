@@ -3,30 +3,31 @@
     <%= form_for @daily_menu , url: daily_menu_path do |f|%>
         <% Category.all.each do |cat| %>
         <h3><%= cat.name %></h3>
-        <% @daily_menu.dishes.each do |dish| %>
-            <% if cat.name === dish.category.name %>
+        <% @daily_menu.daily_menus_dishes.each do |relation| %>
+            <% if cat.name === relation.dish.category.name %>
               <ul class="category-list">
                 <li>
-                  <%= dish.name %><% if dish.units == true %> (порция) <% end %> - <%= dish.weight %><%= dish.measure %>/<%= dish.price %>грн
+                  <%= relation.dish.name %><% if relation.dish.units == true %> (порция) <% end %> - <%= relation.dish.weight %><%= relation.dish.measure %>/<%= relation.dish.price %>грн
+                  <span><%= link_to 'x', daily_menu_daily_menus_dish_path(relation) ,method: :delete %></span>
                 </li>
               </ul>
             <% end %>
           <% end %>
         <% end %>
         <div class="mt-4 form-group">
-        <%= f.submit %>
+          <button type="submit" class="btn btn-primary">Создать</button>
         </div>
     <% end %>
   </div>
   <div class="col-4">
     <%= form_for @daily_menu , url: daily_menus_add_dish_path do |f|%>
       <div class="form-group">
-        <span class="h4">Add dish</span>
+        <span class="h4">Добавить блюдо</span>
         <div>
           <%=collection_select(:dish,:dish_id,Dish.all,:id,:name ) %>
         </div>
       </div>
-      <button class="btn btn-primary">Add</button>
+      <button type="submit" class="btn btn-primary">Добавить</button>
     <% end %>
   </div>
 </div>

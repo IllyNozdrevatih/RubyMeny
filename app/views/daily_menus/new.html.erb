@@ -1,5 +1,10 @@
 <%= form_for @daily_menu , url: daily_menus_path do |f|%>
-  <%=f.date_select :date %>
-  <%= f.submit %>
+  <div class="form-group row">
+    <label for="example-datetime-local-input" class="col-2 col-form-label">Дата</label>
+    <div class="col-10">
+      <input class="form-control" type="date" value=<%= Date.today%> id="example-datetime-local-input" name="date">
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary mb-4">Создать</button>
 <% end %>
 

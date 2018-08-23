@@ -8,7 +8,7 @@ class DailyMenusController < ApplicationController
     @daily_menu = DailyMenu.new
   end
   def create
-    @daily_menu = DailyMenu.new(daily_menu_params)
+    @daily_menu = DailyMenu.new('date'=>daily_menu_params)
     @daily_menu.save()
     redirect_to daily_menus_path , success: 'Меню создано . Измените меню , что-бы добавить блюдо'
   end
@@ -42,6 +42,6 @@ class DailyMenusController < ApplicationController
     @daily_menu = DailyMenu.find(params[:id])
   end
   def daily_menu_params
-    params[:daily_menu].permit(:date)
+    request['date']
   end
 end

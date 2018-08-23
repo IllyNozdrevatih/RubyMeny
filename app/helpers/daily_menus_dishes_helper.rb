@@ -1,0 +1,2 @@
+module DailyMenusDishesHelper
+end

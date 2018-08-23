@@ -1,0 +1,46 @@
+<%= form_for @dish  do |f|%>
+  <% if @dish.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dish.errors.count, "error") %> prohibited this article from being saved:</h2>
+      <ul>
+        <% @dish.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="form-group">
+    <%= f.label :name , "Название" %>
+    <%= f.text_field :name , class:"form-control"%>
+  </div>
+  <div class="form-group">
+    <%= f.label :weight , "Вес"%>
+    <%= f.text_field :weight, class:"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :measure , "Мера" %>
+    <%= f.text_field :measure, class:"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :price , "Цена"%>
+    <%= f.text_field :price, class:"form-control" %>
+  </div>
+  <div class="h5">Категория:</div>
+  <%= collection_radio_buttons(:dish , :category_id , Category.all ,:id, :name) do |cat|%>
+    <div class="form-check"><%= cat.label(class:"form-check-label") {cat.radio_button(class:"form-check-input")  + cat.text} %></div>
+  <% end %>
+  <div class="form-group">
+    <div>Порция</div>
+    <div class="form-check">
+      <label class="form-check-label" for="dish_units_true">
+       <input type="radio" name="dish[units]" id="dish_units_true" class="form-check-input" <% if @dish.units == true %> checked <% end %> value="1">Да
+      </label>
+    </div>
+    <div class="form-check">
+      <label class="form-check-label" for="dish_units_false">
+        <input type="radio" name="dish[units]"  id="dish_units_false" class="form-check-input" <% if @dish.units == false %> checked <% end %> value="0">Нет
+      </label>
+    </div>
+  </div>
+  <%= f.submit %>
+<% end %>
