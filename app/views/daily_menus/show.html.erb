@@ -8,7 +8,7 @@
           <% if dish.units == true %>
             (порция)
           <% end %>
-          <%= dish.measure %>/<%= dish.last_price(dish) %>грн
+          <%= dish.measure %>/<%= dish.last_price(dish , @daily_menu ) %>грн
         </li>
       </ul>
     <% end %>

@@ -26,7 +26,8 @@ class DailyMenusController < ApplicationController
 
   end
   def destroy
-    @daily_menu.destroy
+    @daily_menu.dishes.clear
+    @daily_menu.delete
     redirect_to daily_menus_path , success: 'Меню удалено'
   end
   def add_dish

@@ -6,7 +6,7 @@ class Dish < ApplicationRecord
   validates :price ,numericality:true,presence: true
   validates :weight ,numericality:true,presence: true
 
-  def last_price(dish)
-    daily_menus_dishes.find(dish.daily_menus_dishes[0].id).price
+  def last_price(dish , daily_menu)
+    daily_menus_dishes.find_by(dish_id: dish.id,daily_menu_id: daily_menu.id).price
   end
 end
