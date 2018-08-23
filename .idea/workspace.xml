@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="137fb7ca-0b36-4b28-8008-782e1e47267f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/categories/_form.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/dishes/_form.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/daily_menus_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/daily_menus_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/dish.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/dish.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/categories/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/categories/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/categories/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/categories/new.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/daily_menus/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/daily_menus/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/daily_menus/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/daily_menus/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/daily_menus/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/daily_menus/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/dishes/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/dishes/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/dishes/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/dishes/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -50,7 +39,7 @@
           <entry key="Gemfile" value="2" />
           <entry key="erb" value="134" />
           <entry key="js" value="1" />
-          <entry key="rb" value="136" />
+          <entry key="rb" value="138" />
           <entry key="scss" value="4" />
           <entry key="yml" value="1" />
         </counts>
@@ -59,7 +48,7 @@
         <counts>
           <entry key="JavaScript" value="1" />
           <entry key="RHTML" value="134" />
-          <entry key="Ruby" value="138" />
+          <entry key="Ruby" value="140" />
           <entry key="SCSS" value="4" />
           <entry key="YAML" value="1" />
         </counts>
@@ -67,16 +56,16 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Gemfile" value="7" />
-          <entry key="erb" value="5455" />
-          <entry key="rb" value="5496" />
+          <entry key="erb" value="5484" />
+          <entry key="rb" value="5515" />
           <entry key="scss" value="46" />
           <entry key="yml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="RHTML" value="5455" />
-          <entry key="Ruby" value="5503" />
+          <entry key="RHTML" value="5484" />
+          <entry key="Ruby" value="5522" />
           <entry key="SCSS" value="46" />
           <entry key="YAML" value="3" />
         </counts>
@@ -93,53 +82,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/daily_menus/edit.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="29" column="60" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="310" column="22" selection-start-line="310" selection-start-column="22" selection-end-line="310" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/categories/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+            <state relative-caret-position="66">
+              <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.5.1/gems/actionview-5.2.1/lib/action_view/helpers/form_helper.rb">
+        <entry file="file://$PROJECT_DIR$/app/controllers/daily_menus_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="2199" column="29" lean-forward="true" selection-start-line="2199" selection-start-column="29" selection-end-line="2199" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/helpers/categories_helper.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="23" selection-start-column="23" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/dish.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+            <state relative-caret-position="60">
+              <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -150,8 +103,8 @@
     <findStrings>
       <find>find_daily_menu</find>
       <find>render</find>
-      <find>COLOR</find>
       <find>Create</find>
+      <find>COLOR</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -190,7 +143,6 @@
         <option value="$PROJECT_DIR$/app/views/categories/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/dishes/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/daily_menus_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/daily_menus/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/categories/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/categories/edit.html.erb" />
@@ -202,11 +154,12 @@
         <option value="$PROJECT_DIR$/app/models/dish.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/daily_menus_dishes_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/daily_menus/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
         <option value="$PROJECT_DIR$/app/helpers/categories_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/categories/_form.html.erb" />
         <option value="$USER_HOME$/.rvm/gems/ruby-2.5.1/gems/actionview-5.2.1/lib/action_view/helpers/form_helper.rb" />
+        <option value="$PROJECT_DIR$/app/views/daily_menus/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/daily_menus_controller.rb" />
       </list>
     </option>
   </component>
@@ -489,12 +442,12 @@
       <workItem from="1534624302821" duration="8598000" />
       <workItem from="1534679469286" duration="2456000" />
       <workItem from="1534700127303" duration="15618000" />
-      <workItem from="1535022687438" duration="12483000" />
+      <workItem from="1535022687438" duration="14183000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144600000" />
+    <option name="totallyTimeSpent" value="146300000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
@@ -764,13 +717,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/daily_menus_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/daily_menus_dish.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -781,38 +727,10 @@
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/daily_menus_dishes.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/daily_menus_dishes_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="57" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="310" column="22" selection-start-line="310" selection-start-column="22" selection-end-line="310" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/daily_menus/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="29" column="60" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/categories_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" selection-start-column="23" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -823,6 +741,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.5.1/gems/actionview-5.2.1/lib/action_view/helpers/form_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="2199" column="29" selection-start-line="2199" selection-start-column="29" selection-end-line="2199" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/categories_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/categories/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -830,10 +762,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.5.1/gems/actionview-5.2.1/lib/action_view/helpers/form_helper.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="2199" column="29" lean-forward="true" selection-start-line="2199" selection-start-column="29" selection-end-line="2199" selection-end-column="29" />
+        <state relative-caret-position="395">
+          <caret line="310" column="22" selection-start-line="310" selection-start-column="22" selection-end-line="310" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/daily_menus_dishes_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="57" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/daily_menus/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/daily_menus_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
         </state>
       </provider>
     </entry>

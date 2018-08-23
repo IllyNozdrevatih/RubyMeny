@@ -2,7 +2,7 @@ class DailyMenusController < ApplicationController
   before_action :authenticate_user!
   before_action :find_daily_menu , only: [:edit,:add_dish, :update ,:show ,:destroy]
   def index
-    @daily_menus = DailyMenu.order(created_at: :desc)
+    @daily_menus = DailyMenu.includes(:dishes).order(created_at: :desc)
   end
   def new
     @daily_menu = DailyMenu.new
@@ -39,7 +39,7 @@ class DailyMenusController < ApplicationController
     params.require(:dish).permit(:dish_id)
   end
   def find_daily_menu
-    @daily_menu = DailyMenu.find(params[:id])
+    @daily_menu = DailyMenu.includes(:dishes).find(params[:id])
   end
   def daily_menu_params
     request['date']
