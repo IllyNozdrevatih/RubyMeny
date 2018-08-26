@@ -1,7 +1,13 @@
 <h3><%=@category.name %></h3>
 <% @category.dish.each do |dish| %>
   <ul class="category-list">
-    <li><%= dish.name %> - <%= dish.weight %><%= dish.measure %>/<%= dish.price %>грн</li>
+    <li><%= dish.name %>
+    	<% if dish.units == true %>
+            (порция)
+        <% end %> 
+        - <%= dish.weight %>
+        <%= dish.measure %>/<%= dish.price %>грн
+    </li>
   </ul>
 <% end %>
 <%= link_to 'назад' , categories_path%>

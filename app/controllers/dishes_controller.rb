@@ -1,6 +1,6 @@
 class DishesController < ApplicationController
   before_action :authenticate_user!
-  before_action :find_dish , only: [:edit,:add_dish, :update ,:show ,:destroy]
+  before_action :find_dish , only: [:edit,:add_dish, :update ,:destroy]
   def index
     @dishes = Dish.all
   end
@@ -24,9 +24,6 @@ class DishesController < ApplicationController
     else
       render :edit , denger: 'Блюдо не обновлено'
     end
-  end
-  def show
-
   end
   def destroy
     if @dish.destroy

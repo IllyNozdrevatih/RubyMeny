@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root 'home#index'
   patch 'daily_menus/:id/add_dish' ,as: 'daily_menus_add_dish' , to: 'daily_menus#add_dish'
 
-  resources :dishes
+  resources :dishes , except: :show
   resources :categories
   resources :daily_menus do
     resources :daily_menus_dishes , only: :destroy
