@@ -36,6 +36,7 @@ class DailyMenusController < ApplicationController
   end
 
   private
+  
   def dish_params
     params.require(:dish).permit(:dish_id)
   end
