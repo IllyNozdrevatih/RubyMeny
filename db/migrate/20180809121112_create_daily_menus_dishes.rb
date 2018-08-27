@@ -4,6 +4,7 @@ class CreateDailyMenusDishes < ActiveRecord::Migration[5.2]
       t.belongs_to :dish , index: true
       t.belongs_to :daily_menu , index: true
       t.float :price , null: false
+      t.string :category , null: false 
     end
   end
 end

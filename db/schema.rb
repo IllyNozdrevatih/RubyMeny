@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2018_08_16_114549) do
     t.bigint "dish_id"
     t.bigint "daily_menu_id"
     t.float "price", null: false
+    t.string "category", null: false
     t.index ["daily_menu_id"], name: "index_daily_menus_dishes_on_daily_menu_id"
     t.index ["dish_id"], name: "index_daily_menus_dishes_on_dish_id"
   end

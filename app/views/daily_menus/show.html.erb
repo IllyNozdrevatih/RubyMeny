@@ -1,13 +1,15 @@
-<% Category.all.each do |cat| %>
-  <h3><%= cat.name %></h3>
+<% DailyMenusDish.select(:category).distinct.each do |relation| %>
+  <h3><%= relation.category %></h3>
   <% @daily_menu.dishes.each do |dish| %>
-    <% if cat.name === dish.category.name %>
+    <% if relation.category === dish.category.name %>
       <ul class="category-list">
         <li>
-          <%= dish.name %> - <%= dish.weight %>
+          <%= dish.name %>
           <% if dish.units == true %>
             (порция)
-          <% end %>
+          <% end %> 
+          - 
+          <%= dish.weight %>
           <%= dish.measure %>/<%= dish.last_price(dish , @daily_menu ) %>грн
         </li>
       </ul>
