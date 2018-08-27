@@ -26,9 +26,9 @@ class DishesController < ApplicationController
     end
   end
   def destroy
-    if @dish.destroy
-      redirect_to dishes_path, success: 'Блюдо удалено'
-    end
+    @dish.daily_menus.clear
+    @dish.destroy
+    redirect_to dishes_path, success: 'Блюдо удалено'
   end
   private
   def find_dish
