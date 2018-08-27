@@ -7,7 +7,7 @@
           <% if cat.category === relation.dish.category.name %>
             <ul class="category-list">
               <li>
-                <%= relation.dish.name %><% if relation.dish.units == true %> (порция) <% end %> - <%= relation.dish.weight %><%= relation.dish.measure %>/<%= relation.dish.price %>грн
+                <%= relation.dish.name %><% if relation.dish.units == true %> (порция) <% end %> - <%= relation.dish.weight %><%= relation.dish.measure %>/<%= relation.price %>грн
                 <span><%= link_to 'x', daily_menu_daily_menus_dish_path(relation) ,method: :delete %></span>
               </li>
             </ul>
