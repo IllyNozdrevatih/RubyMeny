@@ -1,0 +1,18 @@
+<table class="table">
+  <tr>
+    <td>id</td>
+    <td>email</td>
+    <td>роль</td>
+    <td>последнее посещение</td>
+    <td>удалить</td>
+  </tr>
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.id %></td>
+    <td><%= user.email %></td>
+    <td><%= user.role %></td>
+    <td><%= user.last_sign_in_at.strftime("%d-%m-%y") %></td>
+    <td><%= link_to 'x' , admin_user_path(user) , method: :delete%></td>
+  </tr>
+<% end %>
+</table>

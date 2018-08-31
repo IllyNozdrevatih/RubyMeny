@@ -64,3 +64,10 @@ gem 'jquery-rails'
 gem 'mysql2', '~> 0.5.2'
 gem 'devise'
 gem 'simple_form'
+
+group :test do
+  gem 'rspec-rails', '~> 3.8'
+  gem 'factory_bot_rails'
+  
+  gem 'factory_girl_rails'
+end

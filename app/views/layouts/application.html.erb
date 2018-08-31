@@ -74,6 +74,14 @@
                     <li class="nav-item">
                       <%= link_to 'Создать категорию' , new_category_path , class:"nav-link" %>
                     </li>
+                    <% if !(user_signed_in?) %>
+                      <% else %>
+                        <% if current_user.role == 'admin' %>
+                          <li>
+                            <%= link_to 'Пользователи' , admin_users_path, class:"nav-link"%>
+                          </li>
+                        <% end %>    
+                    <% end %>
                   </ul>
                 </div>
               </nav>
@@ -123,6 +131,14 @@
                     <li class="nav-item">
                       <%= link_to 'Создать категорию' , new_category_path , class:"nav-link" %>
                     </li>
+                    <% if !(user_signed_in?) %>
+                      <% else %>
+                        <% if current_user.role == 'admin' %>
+                          <li>
+                            <%= link_to 'Пользователи' , admin_users_path, class:"nav-link"%>
+                          </li>
+                      <% end %>    
+                    <% end %> 
                   </ul>
                 </div>
               </nav>

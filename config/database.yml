@@ -10,3 +10,7 @@ default: &default
 development:
   <<: *default
   database: FirstProjectOnRails4
+
+test:
+  <<: *default
+  database: FirstProjectOnRails5

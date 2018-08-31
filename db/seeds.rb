@@ -34,3 +34,4 @@ end
 hot_dishes.each do |dish|
   Dish.create(name: dish ,weight: 100,price: 15.00,measure: 'гр',category_id: 4)
 end
+
