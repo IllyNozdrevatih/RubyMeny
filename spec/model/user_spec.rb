@@ -4,7 +4,7 @@ RSpec.describe User, :type => :model do
   subject { 
   	described_class.new(
 	  	email: "valid@mail.ru", encrypted_password: "$2a$11$3J/wK6acuPuVQhwSZyqZQufPKmtrZ93MPSTNnzkz.3YG9UhaMaPn.",
-	  	created_at:DateTime.now , updated_at:DateTime.now
+	  	created_at:DateTime.now , updated_at:DateTime.now , role: "admin"
   )}
   
   it "is valid without a email" do
@@ -25,5 +25,10 @@ RSpec.describe User, :type => :model do
   it "is valid with valid updated_at" do
   	subject.updated_at = nil
   	expect(subject).to_not be_valid
-  end		
+  end
+
+  it "is valid with valid role" do
+  	subject.role = nil
+  	expect(subject).to be_valid
+  end  		
 end
