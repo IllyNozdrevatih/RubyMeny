@@ -11,6 +11,6 @@ class DailyMenusDish < ApplicationRecord
     self.price = dish.price
   end
   def set_category
-  	self.category = dish.category.name
+  	self.category = dish.category.title
   end	
 end

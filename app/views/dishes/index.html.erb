@@ -1,15 +1,15 @@
 <% Category.all.each do |cat| %>
-  <h3><%= cat.name %></h3>
+  <h3><%= cat.title %></h3>
   <ul class="category-list">
   <% @dishes.each do |dish| %>
-    <% if cat.name === dish.category.name %>
+    <% if cat.title === dish.category.title %>
         <li>
-          <%= dish.name  %>
+          <%= dish.title  %>
           <% if dish.units == true %>
             (порция)
           <% end %> - <%= dish.weight %><%= dish.measure %>/<%= dish.price %>грн
           <span>
-            <%=link_to 'x' , dish_path(dish.id), method: :delete %>
+            <%=link_to "x" , dish_path(dish.id), method: :delete %>
           </span>
           <span>
             <%= link_to 'Редактировать' , edit_dish_path(dish) %>

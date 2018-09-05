@@ -29,6 +29,6 @@ RSpec.describe User, :type => :model do
 
   it "is valid with valid role" do
   	subject.role = nil
-  	expect(subject).to be_valid
+  	expect(subject).to_not be_valid
   end  		
 end

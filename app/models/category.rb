@@ -1,4 +1,4 @@
 class Category < ApplicationRecord
   has_many :dish
-  validates :name,presence: true
+  validates :title,presence: true
 end

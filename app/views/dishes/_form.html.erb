@@ -10,8 +10,8 @@
     </div>
   <% end %>
   <div class="form-group">
-    <%= f.label :name , "Название" %>
-    <%= f.text_field :name , class:"form-control"%>
+    <%= f.label :title , "Название" %>
+    <%= f.text_field :title , class:"form-control"%>
   </div>
   <div class="form-group">
     <%= f.label :weight , "Вес"%>
@@ -26,7 +26,7 @@
     <%= f.text_field :price, class:"form-control" %>
   </div>
   <div class="h5">Категория:</div>
-  <%= collection_radio_buttons(:dish , :category_id , Category.all ,:id, :name) do |cat|%>
+  <%= collection_radio_buttons(:dish , :category_id , Category.all ,:id, :title) do |cat|%>
     <div class="form-check"><%= cat.label(class:"form-check-label") {cat.radio_button(class:"form-check-input")  + cat.text} %></div>
   <% end %>
   <div class="form-group">

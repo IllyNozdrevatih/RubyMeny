@@ -1,6 +1,6 @@
 class DishesController < ApplicationController
   before_action :authenticate_user!
-  before_action :find_dish , only: [:edit,:add_dish, :update ,:destroy]
+  before_action :find_dish , only: [:edit,:add_dish, :update ,:destroy , :show]
   def index
     @dishes = Dish.all
   end
@@ -15,6 +15,9 @@ class DishesController < ApplicationController
       render :new, denger: 'Ошибка'
     end
   end
+  def show
+
+  end  
   def edit
 
   end
@@ -35,7 +38,7 @@ class DishesController < ApplicationController
     @dish = Dish.find(params[:id])
   end
   def dish_params
-    params[:dish].permit(:name,:weight,:measure,:price,:units,:category_id)
+    params[:dish].permit(:title,:weight,:measure,:price,:units,:category_id)
   end
 end
 

@@ -41,6 +41,6 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
   end
   def category_param
-    params[:category].permit(:name)
+    params[:category].permit(:title)
   end
 end

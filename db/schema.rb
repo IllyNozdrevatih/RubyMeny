@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2018_08_16_114549) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name", null: false
+    t.string "title", null: false
   end
 
   create_table "daily_menus", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2018_08_16_114549) do
   end
 
   create_table "dishes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name", null: false
+    t.string "title", null: false
     t.string "weight", null: false
     t.string "measure"
     t.float "price", null: false

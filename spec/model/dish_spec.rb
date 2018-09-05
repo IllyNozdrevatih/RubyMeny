@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Dish, :type => :model do
   subject { 
   	described_class.new(
-	  	name: "Катлета кивская", weight: "200",
+	  	title: "Катлета кивская", weight: "200",
 	  	  measure:"гр", price:15.2 , units: 0 ,
         category_id:2
   )}
@@ -12,8 +12,8 @@ RSpec.describe Dish, :type => :model do
     expect(subject).to be_valid
   end
 
-  it "is valid without name" do
-    subject.name = nil
+  it "is valid without title" do
+    subject.title = nil
     expect(subject).to_not be_valid
   end 
 

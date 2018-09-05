@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # переписать  
   patch 'daily_menus/:id/add_dish' ,as: 'daily_menus_add_dish' , to: 'daily_menus#add_dish'
 
-  resources :dishes , except: :show
+  resources :dishes 
   resources :categories
 
   resources :daily_menus do

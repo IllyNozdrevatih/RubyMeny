@@ -1,5 +1,5 @@
 class DailyMenusController < ApplicationController
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
   before_action :find_daily_menu , only: [:edit,:add_dish, :update ,:show ,:destroy]
   def index
     @daily_menus = DailyMenu.includes(:dishes).order(created_at: :desc)

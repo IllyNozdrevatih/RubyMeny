@@ -1,10 +1,10 @@
 <% @daily_menu.daily_menus_dishes.select(:category).distinct.each do |relation| %>
   <h3><%= relation.category %></h3>
   <% @daily_menu.dishes.each do |dish| %>
-    <% if relation.category === dish.category.name %>
+    <% if relation.category === dish.category.title %>
       <ul class="category-list">
         <li>
-          <%= dish.name %>
+          <%= dish.title %>
           <% if dish.units == true %>
             (порция)
           <% end %> 

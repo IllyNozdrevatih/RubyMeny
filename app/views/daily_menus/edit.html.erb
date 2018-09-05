@@ -4,10 +4,10 @@
       <% @daily_menu.daily_menus_dishes.select(:category).distinct.each do |cat| %>
         <h3><%= cat.category %></h3>
         <% @daily_menu.daily_menus_dishes.each do |relation| %>
-          <% if cat.category === relation.dish.category.name %>
+          <% if cat.category === relation.dish.category.title %>
             <ul class="category-list">
               <li>
-                <%= relation.dish.name %><% if relation.dish.units == true %> (порция) <% end %> - <%= relation.dish.weight %><%= relation.dish.measure %>/<%= relation.price %>грн
+                <%= relation.dish.title %><% if relation.dish.units == true %> (порция) <% end %> - <%= relation.dish.weight %><%= relation.dish.measure %>/<%= relation.price %>грн
                 <span><%= link_to 'x', daily_menu_daily_menus_dish_path(relation) ,method: :delete %></span>
               </li>
             </ul>
@@ -24,7 +24,7 @@
       <div class="form-group">
         <span class="h4">Блюдо</span>
         <div>
-          <%=collection_select(:dish,:dish_id,Dish.all,:id,:name ) %>
+          <%=collection_select(:dish,:dish_id,Dish.all,:id,:title ) %>
         </div>
       </div>
       <button type="submit" class="btn btn-primary">Добавить</button>

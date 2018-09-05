@@ -16,22 +16,22 @@ hot_dishes = ['Поджарка','Филе кур. запеч','Печень с 
 hot_units = ['Сиченики из рыбы','Биточки венские']
 
 categoryes.each do |category|
-  Category.create(name: category)
+  Category.create(title: category)
 end
 
 salads_dishes.each do |dish|
-  Dish.create(name: dish ,weight: 100,price: 12.00,measure: 'гр',category_id: 1)
+  Dish.create(title: dish ,weight: 100,price: 12.00,measure: 'гр',category_id: 1)
 end
 
 first_dishes.each do |dish|
-  Dish.create(name: dish ,weight: 100,price: 13.00,measure: 'гр',category_id: 2)
+  Dish.create(title: dish ,weight: 100,price: 13.00,measure: 'гр',category_id: 2)
 end
 
 side_dish.each do |dish|
-  Dish.create(name: dish ,weight: 100,price: 14.00,measure: 'гр',category_id: 3)
+  Dish.create(title: dish ,weight: 100,price: 14.00,measure: 'гр',category_id: 3)
 end
 
 hot_dishes.each do |dish|
-  Dish.create(name: dish ,weight: 100,price: 15.00,measure: 'гр',category_id: 4)
+  Dish.create(title: dish ,weight: 100,price: 15.00,measure: 'гр',category_id: 4)
 end
 
