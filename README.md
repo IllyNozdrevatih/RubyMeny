@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Kitchen site
 
-Things you may want to cover:
+Models:
 
-* Ruby version
+-User ( id , email , password , role )
 
-* System dependencies
+-Dish ( id , title , weight , measure , price , untis , category_id )
 
-* Configuration
+-Category ( id , title )
 
-* Database creation
+-Daily menu ( id , date )
 
-* Database initialization
+Views:
 
-* How to run the test suite
+-dish - index, show , edit , new
 
-* Services (job queues, cache servers, search engines, etc.)
+-category - index ( all categories with related dishes ) , show , new , edit
 
-* Deployment instructions
+-daily menu - index , show , edit , new
 
-* ...
+-admin - index , edit , new
+
+Functional 
+
+User may sign up to site , create dish , category and daily menu , edit and delete all of this , if he logged in .
+
+Admin have all function form user , but may delete , edit and create new user .
